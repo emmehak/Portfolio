@@ -39,8 +39,9 @@ const Home = ({ setActiveSection }) => {
 
   const downloadCV = () => {
     const link = document.createElement("a");
-    link.href = "/public/resume.pdf"; // Adjust the path as necessary
-    link.download = "/public/resume.pdf";
+    link.href = "/resume.pdf";
+    link.download = "resume.pdf";
+
     link.click();
   };
 
@@ -52,9 +53,25 @@ const Home = ({ setActiveSection }) => {
   };
 
   const socialLinks = [
-    { icon: Github, href: "#", label: "GitHub" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Mail, href: "#", label: "Email" },
+    {
+      icon: Github,
+      href: "https://github.com/emmehak",
+      label: "GitHub",
+      color: "hover:text-gray-300",
+    },
+    {
+      icon: Linkedin,
+      href: "https://www.linkedin.com/in/mehak-eman-2a229a24a/",
+      label: "LinkedIn",
+      color: "hover:text-blue-400",
+    },
+
+    {
+      icon: Mail,
+      href: "mailto:em.mehak04@gmail.com",
+      label: "Email",
+      color: "hover:text-green-400",
+    },
   ];
 
   const stats = [
