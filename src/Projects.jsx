@@ -83,7 +83,7 @@ const Projects = () => {
         "User Roles",
         "Dark Mode UI",
       ],
-      liveUrl: "https://dynamic-praline-cf4130.netlify.app/login",
+      liveUrl: "https://dynamic-praline-cf4130.netlify.app",
       githubUrl: "https://github.com/emmehak/admin-dashboard",
       status: "completed",
       year: "2025",
