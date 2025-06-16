@@ -39,12 +39,12 @@ const Home = ({ setActiveSection }) => {
 
   const downloadCV = () => {
     const link = document.createElement("a");
-    link.href = "../public/resume.pdf";
-    link.download = "../public/resume.pdf";
+    link.href = "/public/resume.pdf"; // Adjust the path as necessary
+    link.download = "/public/resume.pdf";
     link.click();
   };
 
-  const viewCV = () => window.open("../public/resume.pdf", "_blank");
+  const viewCV = () => window.open("/public/resume.pdf", "_blank");
 
   const scrollToAbout = () => {
     setActiveSection("about");
