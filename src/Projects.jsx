@@ -69,28 +69,9 @@ const Projects = () => {
       year: "2025",
       color: "from-indigo-400 to-blue-400",
     },
+
     {
       id: 2,
-      title: "Admin Dashboard",
-      description:
-        "Secure dashboard with analytics, role-based access, and custom reports for administrators.",
-      image: dashboardImg,
-      category: "fullstack",
-      technologies: ["React", "Redux", "MongoDB", "Chart.js"],
-      features: [
-        "Real-Time Charts",
-        "Access Control",
-        "User Roles",
-        "Dark Mode UI",
-      ],
-      liveUrl: "https://dynamic-praline-cf4130.netlify.app",
-      githubUrl: "https://github.com/emmehak/admin-dashboard",
-      status: "completed",
-      year: "2025",
-      color: "from-teal-400 to-cyan-400",
-    },
-    {
-      id: 3,
       title: "Fitness Tracker",
       description:
         "Track workouts, calories, and goals with rich visuals and mobile-first experience.",
@@ -108,6 +89,26 @@ const Projects = () => {
       status: "completed",
       year: "2024",
       color: "from-green-400 to-emerald-400",
+    },
+    {
+      id: 3,
+      title: "Admin Dashboard",
+      description:
+        "Secure dashboard with analytics, role-based access, and custom reports for administrators.",
+      image: dashboardImg,
+      category: "fullstack",
+      technologies: ["React", "Redux", "MongoDB", "Chart.js"],
+      features: [
+        "Real-Time Charts",
+        "Access Control",
+        "User Roles",
+        "Dark Mode UI",
+      ],
+      liveUrl: "https://dynamic-praline-cf4130.netlify.app",
+      githubUrl: "https://github.com/emmehak/admin-dashboard",
+      status: "completed",
+      year: "2025",
+      color: "from-teal-400 to-cyan-400",
     },
     {
       id: 4,
