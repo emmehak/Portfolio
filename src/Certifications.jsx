@@ -142,7 +142,7 @@ const Certifications = () => {
   return (
     <section
       id="certifications"
-      className="relative min-h-screen py-20 overflow-hidden"
+      className="relative min-h-screen py-20 overflow-hidden animate-entry"
     >
       {/* Background Elements */}
       <div className="absolute inset-0 pointer-events-none">
@@ -306,17 +306,30 @@ const Certifications = () => {
 
       {/* Custom Styles */}
       <style jsx>{`
+        @keyframes fadeInUp {
+          0% {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
         @keyframes float {
           0%,
           100% {
-            transform: translateY(0px);
+            transform: translateY(0);
           }
           50% {
             transform: translateY(-5px);
           }
         }
-        .animate-float {
-          animation: float 3s ease-in-out infinite;
+
+        .animate-entry {
+          animation: fadeInUp 0.8s ease-out forwards,
+            float 3s ease-in-out infinite;
         }
       `}</style>
     </section>

@@ -215,7 +215,7 @@ const Projects = () => {
     <section
       id="projects"
       ref={sectionRef}
-      className="relative py-20 px-4 sm:px-6 lg:px-12"
+      className="relative py-20 px-4 sm:px-6 lg:px-12 animate-entry"
     >
       <div className="text-center mb-12">
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-2">
@@ -326,6 +326,33 @@ const Projects = () => {
           </button>
         </div>
       )}
+      <style jsx>{`
+        @keyframes fadeInUp {
+          0% {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes float {
+          0%,
+          100% {
+            transform: translateY(0);
+          }
+          50% {
+            transform: translateY(-5px);
+          }
+        }
+
+        .animate-entry {
+          animation: fadeInUp 0.8s ease-out forwards,
+            float 3s ease-in-out infinite;
+        }
+      `}</style>
     </section>
   );
 };
