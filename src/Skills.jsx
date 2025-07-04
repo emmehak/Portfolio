@@ -8,7 +8,7 @@ const skillCategories = {
     color: "from-blue-400 to-cyan-400",
     skills: [
       { name: "React", level: 95, color: "bg-blue-500" },
-      { name: "Next.js", level: 80, color: "bg-red-800" }
+      { name: "Next.js", level: 80, color: "bg-red-800" },
       { name: "TypeScript", level: 70, color: "bg-blue-600" },
       { name: "Redux", level: 88, color: "bg-gray-800" },
       { name: "Tailwind CSS", level: 92, color: "bg-cyan-500" },
