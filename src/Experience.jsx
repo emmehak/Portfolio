@@ -8,21 +8,7 @@ import React, {
 import { Calendar, MapPin, ExternalLink, Award } from "lucide-react";
 
 const experiences = [
-  {
-    title: "Frontend Developer Intern",
-    company: "Code Alpha",
-    location: "Remote",
-    period: "April 2025 - May 2025",
-    type: "Internship",
-    description:
-      "Completed assigned frontend tasks and collaborated on project development using HTML, CSS, JavaScript, and React.",
-    achievements: [
-      "Developed responsive components using React.js",
-      "Uploaded completed projects to GitHub for team review",
-    ],
-    technologies: ["React", "JavaScript", "HTML", "CSS", "Git", "GitHub"],
-    color: "from-rose-400 to-pink-400",
-  },
+
   {
     title: "MERN Stack Developer Intern",
     company: "U Devs",
