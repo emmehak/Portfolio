@@ -9,21 +9,42 @@ import { Calendar, MapPin, ExternalLink, Award } from "lucide-react";
 
 const experiences = [
   {
-    title: "Frontend Developer",
+    title: "Frontend Developer Intern",
     company: "Code Alpha",
     location: "Remote",
     period: "April 2025 - May 2025",
     type: "Internship",
     description:
-      "Creating visually stunning and responsive user interfaces using modern front-end technologies like React and Tailwind CSS...",
+      "Completed assigned frontend tasks and collaborated on project development using HTML, CSS, JavaScript, and React.",
     achievements: [
-      "Designed and developed responsive UI with React and Tailwind CSS",
-      "Created visually appealing components using UI/UX principles",
-      "Managed Git/GitHub version control",
-      "Improved layout consistency across screen sizes",
+      "Developed responsive components using React.js",
+      "Uploaded completed projects to GitHub for team review",
     ],
     technologies: ["React", "JavaScript", "HTML", "CSS", "Git", "GitHub"],
-    color: "from-blue-400 to-cyan-400",
+    color: "from-rose-400 to-pink-400",
+  },
+  {
+    title: "MERN Stack Developer Intern",
+    company: "U Devs",
+    location: "Remote",
+    period: "July 2025 - Present",
+    type: "Internship",
+    description:
+      "Building and maintaining full-stack web applications using the MERN stack while assisting in backend API development and deployment.",
+    achievements: [
+      "Built and maintained full-stack applications using MERN stack",
+      "Assisted in backend API development and debugging",
+      "Supported deployment processes and environment configuration",
+    ],
+    technologies: [
+      "MongoDB",
+      "Express.js",
+      "React",
+      "Node.js",
+      "Git",
+      "GitHub",
+    ],
+    color: "from-green-400 to-emerald-400",
   },
 ];
 
