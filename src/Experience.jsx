@@ -91,7 +91,7 @@ const TimelineItem = React.memo(
       ? `bg-gradient-to-r ${color} shadow-lg shadow-purple-500/50 scale-125`
       : "bg-gray-600 hover:bg-gray-500";
 
-    const containerClasses = `relative pl-8 pb-12 cursor-pointer transform transition-all duration-500 ${
+    const containerClasses = `relative pl-8 pb-8 cursor-pointer transform transition-all duration-500 ${
       isActive ? "scale-105" : "hover:scale-102"
     } ${isVisible ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"}`;
 
@@ -112,7 +112,7 @@ const TimelineItem = React.memo(
           className={`absolute left-0 top-0 w-px h-full ${timelineLineClass}`}
         >
           <div
-            className={`absolute top-0 left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full ${dotClass}`}
+            className={`absolute top-0 left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full transition-all duration-300 ${dotClass}`}
           >
             {isActive && (
               <div
@@ -124,10 +124,10 @@ const TimelineItem = React.memo(
 
         {/* Experience Card */}
         <div className={cardClasses}>
-          <div className="flex flex-wrap items-start justify-between mb-4">
-            <div>
+          <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-4 gap-4">
+            <div className="flex-1">
               <h3
-                className={`text-xl font-bold mb-1 ${
+                className={`text-xl sm:text-2xl font-bold mb-2 ${
                   isActive
                     ? `bg-gradient-to-r ${color} bg-clip-text text-transparent`
                     : "text-white"
@@ -135,20 +135,20 @@ const TimelineItem = React.memo(
               >
                 {experience.title}
               </h3>
-              <p className="text-lg text-gray-300 font-medium">
+              <p className="text-lg text-gray-300 font-medium mb-3">
                 {experience.company}
               </p>
-              <div className="flex items-center space-x-4 mt-2 text-sm text-gray-400">
-                <div className="flex items-center space-x-1">
-                  <Calendar className="w-4 h-4" />
+              <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-sm text-gray-400">
+                <div className="flex items-center gap-1">
+                  <Calendar className="w-4 h-4 flex-shrink-0" />
                   <span>{experience.period}</span>
                 </div>
-                <div className="flex items-center space-x-1">
-                  <MapPin className="w-4 h-4" />
+                <div className="flex items-center gap-1">
+                  <MapPin className="w-4 h-4 flex-shrink-0" />
                   <span>{experience.location}</span>
                 </div>
                 <span
-                  className={`px-2 py-1 rounded-full text-xs ${
+                  className={`px-2 py-1 rounded-full text-xs w-fit ${
                     experience.type === "Full-time"
                       ? "bg-green-500/20 text-green-400"
                       : "bg-blue-500/20 text-blue-400"
@@ -165,22 +165,22 @@ const TimelineItem = React.memo(
           </p>
 
           {isActive && (
-            <div className="space-y-4 animate-fadeIn">
+            <div className="space-y-6 animate-fadeIn">
               <div>
-                <h4 className="flex items-center space-x-2 text-white font-semibold mb-3">
-                  <Award className="w-4 h-4" />
+                <h4 className="flex items-center gap-2 text-white font-semibold mb-3">
+                  <Award className="w-4 h-4 flex-shrink-0" />
                   <span>Key Achievements</span>
                 </h4>
                 <ul className="space-y-2">
                   {experience.achievements.map((ach, i) => (
                     <li
                       key={i}
-                      className="flex items-start space-x-2 text-gray-300"
+                      className="flex items-start gap-3 text-gray-300"
                     >
                       <div
                         className={`w-2 h-2 rounded-full bg-gradient-to-r ${color} mt-2 flex-shrink-0`}
                       />
-                      <span>{ach}</span>
+                      <span className="leading-relaxed">{ach}</span>
                     </li>
                   ))}
                 </ul>
@@ -193,7 +193,7 @@ const TimelineItem = React.memo(
                   {experience.technologies.map((tech, i) => (
                     <span
                       key={i}
-                      className={`px-3 py-1 bg-gradient-to-r ${color} bg-opacity-10 backdrop-blur-sm rounded-full border border-white/20 text-sm text-white hover:scale-110 transition-all`}
+                      className={`px-3 py-1 bg-gradient-to-r ${color} bg-opacity-10 backdrop-blur-sm rounded-full border border-white/20 text-sm text-white hover:scale-110 transition-all cursor-pointer`}
                     >
                       {tech}
                     </span>
@@ -237,7 +237,7 @@ const Experience = () => {
         <div className="absolute bottom-1/4 left-10 w-96 h-96 bg-gradient-to-br from-blue-500/10 to-pink-500/10 rounded-full blur-3xl" />
       </div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div
           className={`text-center mb-16 transform transition-all duration-1000 ${
@@ -250,15 +250,16 @@ const Experience = () => {
               Experience
             </span>
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">
             My professional journey and impact in the tech industry
           </p>
           <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-cyan-400 mx-auto rounded-full mt-6" />
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-12">
+        <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
+          {/* Timeline Section */}
           <div className="lg:col-span-2">
-            <div className="relative">
+            <div className="relative max-w-none">
               {experiences.map((exp, idx) => (
                 <TimelineItem
                   key={idx}
@@ -272,7 +273,7 @@ const Experience = () => {
             </div>
           </div>
 
-          {/* Stats and Skills */}
+          {/* Stats and Skills Sidebar */}
           <div
             className={`space-y-6 transform transition-all duration-1000 delay-500 ${
               isVisible
@@ -280,19 +281,21 @@ const Experience = () => {
                 : "translate-x-10 opacity-0"
             }`}
           >
-            <div className="bg-gradient-to-br from-slate-800/40 to-slate-900/40 backdrop-blur-xl rounded-3xl p-8 shadow-2xl border border-white/10">
-              <h3 className="text-2xl font-bold text-white mb-6">
+            <div className="bg-gradient-to-br from-slate-800/40 to-slate-900/40 backdrop-blur-xl rounded-3xl p-6 lg:p-8 shadow-2xl border border-white/10 sticky top-4">
+              <h3 className="text-xl lg:text-2xl font-bold text-white mb-6">
                 Career Highlights
               </h3>
-              <div className="space-y-6">
+              <div className="space-y-4">
                 {stats.map((stat, idx) => (
                   <div
                     key={idx}
-                    className="flex items-center justify-between p-4 bg-white/5 rounded-xl border border-white/10"
+                    className="flex items-center justify-between p-4 bg-white/5 rounded-xl border border-white/10 hover:bg-white/10 transition-all duration-300"
                   >
-                    <span className="text-gray-300">{stat.label}</span>
+                    <span className="text-gray-300 text-sm lg:text-base">
+                      {stat.label}
+                    </span>
                     <span
-                      className={`text-2xl font-bold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent`}
+                      className={`text-xl lg:text-2xl font-bold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent`}
                     >
                       {stat.value}
                     </span>
@@ -308,7 +311,7 @@ const Experience = () => {
                   {skills.map((skill, idx) => (
                     <span
                       key={idx}
-                      className="px-3 py-1 bg-gradient-to-r from-purple-400 to-cyan-400 bg-opacity-20 backdrop-blur-sm rounded-full border border-white/20 text-sm text-white hover:scale-110 transition-all"
+                      className="px-3 py-1 bg-gradient-to-r from-purple-400 to-cyan-400 bg-opacity-20 backdrop-blur-sm rounded-full border border-white/20 text-sm text-white hover:scale-110 transition-all cursor-pointer"
                     >
                       {skill}
                     </span>
