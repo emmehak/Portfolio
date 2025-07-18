@@ -39,7 +39,7 @@ const Home = ({ setActiveSection }) => {
 
   const downloadCV = () => {
     const link = document.createElement("a");
-    link.href = "/Resume.pdf";
+    link.href = "/Mehak_Eman_Resume.pdf";
     link.download = "Mehak_Eman_Resume.pdf";
     document.body.appendChild(link);
     link.click();
@@ -47,7 +47,7 @@ const Home = ({ setActiveSection }) => {
   };
 
   const viewCV = () => {
-    window.open("/Resume.pdf", "_blank");
+    window.open("/Mehak_Eman_Resume.pdf", "_blank");
   };
 
   const scrollToAbout = () => {
