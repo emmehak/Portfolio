@@ -39,15 +39,15 @@ const Home = ({ setActiveSection }) => {
 
   const downloadCV = () => {
     const link = document.createElement("a");
-    link.href = "/Mehak_Eman_Resume.pdf";
-    link.download = "Mehak_Eman_Resume.pdf";
+    link.href = "/Mehak-Eman-Resume.pdf";
+    link.download = "Mehak-Eman-Resume.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
   };
 
   const viewCV = () => {
-    window.open("/Mehak_Eman_Resume.pdf", "_blank");
+    window.open("/Mehak-Eman-Resume.pdf", "_blank");
   };
 
   const scrollToAbout = () => {
