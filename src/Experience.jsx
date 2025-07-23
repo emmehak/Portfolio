@@ -9,20 +9,31 @@ import { Calendar, MapPin, ExternalLink, Award } from "lucide-react";
 
 const experiences = [
   {
-    title: "Frontend Developer",
-    company: "Code Alpha",
+    title: "Open Source Contributor",
+    company: "GirlScript Summer of Code (GSSoC 2025)",
     location: "Remote",
-    period: "April 2025 - May 2025",
-    type: "Internship",
+    period: "July 2025 – Present",
+    type: "Open Source",
     description:
-      "Working as a frontend developer intern focusing on building responsive and dynamic user interfaces using React and modern web technologies.",
+      "Contributing to frontend-heavy open-source projects built with React and the MERN stack.",
     achievements: [
-      "Completed frontend tasks assigned by the organization",
-      "Built and styled components using React and Tailwind CSS",
-      "Uploaded completed projects and code to GitHub for review",
+      "Selected as a contributor for GSSoC 2025 among nationwide applicants",
+      "Set up local development environments for MERN-based projects",
+      "Fixed UI/UX bugs and improved overall design consistency",
+      "Enhanced reusability and modularity of React components",
     ],
-    technologies: ["React", "HTML", "CSS", "JavaScript", "Git", "GitHub"],
-    color: "from-indigo-400 to-purple-500",
+    technologies: [
+      "React",
+      "MongoDB",
+      "Express.js",
+      "Node.js",
+      "Next.js",
+      "TailwindCSS",
+      "JavaScript",
+      "Git",
+      "GitHub",
+    ],
+    color: "from-pink-500 to-yellow-500",
   },
 ];
 
